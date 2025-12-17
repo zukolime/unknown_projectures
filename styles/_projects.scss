@@ -1,6 +1,6 @@
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 26px;
   margin-top: 28px;
 }
@@ -31,7 +31,7 @@
 
   &:hover .project-card__screen-image,
   &:focus .project-card__screen-image {
-    filter: grayscale(20%);
+    filter: grayscale(0%);
   }
 
   &__device {
@@ -74,17 +74,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
   }
 
   &__badge {
     color: #fff;
     font-size: 12px;
     padding: 6px 8px;
-    border-radius: 6px;
-    background: #000;
+    border-radius: 4px;
+    background: $color-bg;
   }
 
   &__panel {
