@@ -164,12 +164,18 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 520px) {
   .projects {
     grid-template-columns: 1fr;
   }
 
   .project-card__screen {
     height: 180px;
+  }
+}
+
+@media (max-width: 370px) {
+  .project-card__screen {
+    height: 140px;
   }
 }
