@@ -1,0 +1,69 @@
+[
+  {
+    "id": "1",
+    "img": {
+      "src": "./images/profremont.png",
+      "alt": "Превью Профремонт"
+    },
+    "badges": ["HTML", "SCSS", "JS"],
+    "title": "Профремонт",
+    "description": "Многостраничный сайт с интерактивными элементами. На базе готовой реализованы модальные окна, слайдеры, формы с валидацией, таймеры и калькулятор. Вся логика собрана в модульную структуру на чистом JavaScript.",
+    "links": [
+      {
+        "link_demo": "https://zukolime.github.io/Profremont-project/",
+        "link_github": "https://github.com/zukolime/Profremont-project"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "img": {
+      "src": "./images/taskly.png",
+      "alt": "Превью Taskly"
+    },
+    "badges": ["React", "styled-components", "TS"],
+    "title": "Taskly",
+    "description": "Минималистичное приложение для управления задачами. Можно создавать, удалять задачи, а также изменять их статус «выполнено/не выполнено». Реализованы хранение данных в LocalStorage, маршрутизация между страницами и переключение светлой/тёмной темы. Проект демонстрирует работу с Redux и компонентный подход к стилизации.",
+    "links": [
+      {
+        "link_demo": "https://zukolime.github.io/taskly",
+        "link_github": "https://github.com/zukolime/taskly/tree/styled-components"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "img": {
+      "src": "./images/marvel-explorer.png",
+      "alt": "Превью marvel explorer"
+    },
+    "badges": ["React", "SCSS", "JS"],
+    "title": "Marvel Explorer",
+    "description": "SPA для поиска персонажей и комиксов во вселенной Marvel. Реализована форма поиска с валидацией, маршрутизация между страницами и загрузка данных из внешнего API. Отдельное внимание уделено управлению состоянием интерфейса и SEO-метаданным.",
+    "links": [
+      {
+        "link_demo": "https://marvel-two-ruddy.vercel.app/",
+        "link_github": "https://github.com/zukolime/marvel"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "img": {
+      "src": "./images/translator-page.png",
+      "alt": "Превью translator-page"
+    },
+    "badges": ["HTML", "CSS", "JS"],
+    "title": "Сайт-визитка",
+    "description": "Простая сайт-визитка на HTML, CSS и JS. Реализованы слайдеры с поддержкой тач-событий и модальное окно для изображений.",
+    "links": [
+      {
+        "link_demo": "https://github.com/zukolime/translator-page-project",
+        "link_github": "#"
+      }
+    ]
+  }
+]
