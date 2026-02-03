@@ -55,13 +55,13 @@ const createProjectCard = (project) => {
       </p>
       <div class="project-card__links">
         <a
-          href="${project.links[0].link_demo}"
+          href="${project.links.link_demo}"
           target="_blank"
           class="project-card__link"
           >[ ДЕМО ]</a
         >
         <a
-          href="${project.links[0].link_github}"
+          href="${project.links.link_github}"
           target="_blank"
           class="project-card__link"
           >[ ГИТХАБ ]</a

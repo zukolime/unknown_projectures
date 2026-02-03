@@ -8,12 +8,10 @@
     "badges": ["HTML", "SCSS", "JS"],
     "title": "Профремонт",
     "description": "Многостраничный сайт с интерактивными элементами. На базе готовой реализованы модальные окна, слайдеры, формы с валидацией, таймеры и калькулятор. Вся логика собрана в модульную структуру на чистом JavaScript.",
-    "links": [
-      {
-        "link_demo": "https://zukolime.github.io/Profremont-project/",
-        "link_github": "https://github.com/zukolime/Profremont-project"
-      }
-    ]
+    "links": {
+      "link_demo": "https://zukolime.github.io/Profremont-project/",
+      "link_github": "https://github.com/zukolime/Profremont-project"
+    }
   },
 
   {
