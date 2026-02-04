@@ -54,8 +54,8 @@
     "title": "Сайт-визитка",
     "description": "Простая сайт-визитка на HTML, CSS и JS. Реализованы слайдеры с поддержкой тач-событий и модальное окно для изображений.",
     "links": {
-      "link_demo": "#",
-      "link_github": "#"
+      "link_demo": "https://github.com/zukolime/unknown_projectures/tree/main/projects/personal-website_template/dist",
+      "link_github": "https://github.com/zukolime/unknown_projectures/tree/main/projects/personal-website_template"
     }
   }
 ]

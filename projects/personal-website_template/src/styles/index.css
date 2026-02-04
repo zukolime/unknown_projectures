@@ -1,0 +1,13 @@
+@import './base.css';
+@import './fonts.css';
+@import './slider.css';
+
+@import './sections/header.css';
+@import './sections/about.css';
+@import './sections/benefits.css';
+@import './sections/services.css';
+@import './sections/prices.css';
+@import './sections/payment.css';
+@import './sections/feedback.css';
+@import './sections/contacts.css';
+@import './sections/footer.css';

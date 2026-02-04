@@ -1,0 +1,40 @@
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  counter-reset: my-counter;
+}
+
+.benefits__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 0;
+  gap: 1.25rem;
+  counter-increment: my-counter;
+}
+
+.benefits__item:before {
+  content: '0' counter(my-counter);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.0625rem;
+}
+
+.benefits__descr {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1420px) {
+  .benefits__list {
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .benefits__list {
+    grid-template-columns: repeat(auto-fit, 20.5rem);
+  }
+}

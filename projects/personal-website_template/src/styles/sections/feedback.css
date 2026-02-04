@@ -1,0 +1,85 @@
+.feedback__wrapper {
+  display: block;
+  width: 100%;
+}
+
+.feedback__list {
+  display: flex;
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: repeat(4, 20.5rem); */
+  gap: 1rem;
+}
+
+.feedback__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback__zoom {
+  background: rgb(0 0 0 / 30%) url('../../assets/img/icons/zoom.svg') no-repeat
+    center / 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.feedback__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.feedback__modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feedback__modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.875rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+
+  transform: rotate(0);
+  transition: transform 0.3s linear;
+}
+
+@media (hover: hover) {
+  .feedback__item:hover .feedback__zoom {
+    opacity: 1;
+  }
+
+  .feedback__modal-close:hover {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 990px) {
+  .feedback__list {
+    justify-content: flex-start;
+  }
+}

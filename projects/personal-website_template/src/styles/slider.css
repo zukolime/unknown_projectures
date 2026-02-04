@@ -1,0 +1,28 @@
+.slider {
+  width: 100%;
+}
+
+.buttons-slider {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .slider {
+    overflow: hidden;
+  }
+}
