@@ -23,12 +23,10 @@
     "badges": ["React", "styled-components", "TS"],
     "title": "Taskly",
     "description": "Минималистичное приложение для управления задачами. Можно создавать, удалять задачи, а также изменять их статус «выполнено/не выполнено». Реализованы хранение данных в LocalStorage, маршрутизация между страницами и переключение светлой/тёмной темы. Проект демонстрирует работу с Redux и компонентный подход к стилизации.",
-    "links": [
-      {
-        "link_demo": "https://zukolime.github.io/taskly",
-        "link_github": "https://github.com/zukolime/taskly/tree/styled-components"
-      }
-    ]
+    "links": {
+      "link_demo": "https://zukolime.github.io/taskly",
+      "link_github": "https://github.com/zukolime/taskly/tree/styled-components"
+    }
   },
 
   {
@@ -40,28 +38,24 @@
     "badges": ["React", "SCSS", "JS"],
     "title": "Marvel Explorer",
     "description": "SPA для поиска персонажей и комиксов во вселенной Marvel. Реализована форма поиска с валидацией, маршрутизация между страницами и загрузка данных из внешнего API. Отдельное внимание уделено управлению состоянием интерфейса и SEO-метаданным.",
-    "links": [
-      {
-        "link_demo": "https://marvel-two-ruddy.vercel.app/",
-        "link_github": "https://github.com/zukolime/marvel"
-      }
-    ]
+    "links": {
+      "link_demo": "https://marvel-two-ruddy.vercel.app/",
+      "link_github": "https://github.com/zukolime/marvel"
+    }
   },
 
   {
     "id": 4,
     "img": {
-      "src": "./images/translator-page.png",
-      "alt": "Превью translator-page"
+      "src": "./images/personal-website.png",
+      "alt": "Превью personal-website"
     },
     "badges": ["HTML", "CSS", "JS"],
     "title": "Сайт-визитка",
     "description": "Простая сайт-визитка на HTML, CSS и JS. Реализованы слайдеры с поддержкой тач-событий и модальное окно для изображений.",
-    "links": [
-      {
-        "link_demo": "https://github.com/zukolime/translator-page-project",
-        "link_github": "#"
-      }
-    ]
+    "links": {
+      "link_demo": "#",
+      "link_github": "#"
+    }
   }
 ]
