@@ -1,8 +1,8 @@
 [
   {
-    "id": "1",
+    "id": "profremont",
     "img": {
-      "src": "./images/profremont.png",
+      "src": "./images/profremont.webp",
       "alt": "Превью Профремонт"
     },
     "badges": ["HTML", "SCSS", "JS"],
@@ -15,9 +15,9 @@
   },
 
   {
-    "id": 2,
+    "id": "taskly",
     "img": {
-      "src": "./images/taskly.png",
+      "src": "./images/taskly.webp",
       "alt": "Превью Taskly"
     },
     "badges": ["React", "styled-components", "TS"],
@@ -30,9 +30,9 @@
   },
 
   {
-    "id": 3,
+    "id": "marvel-explorer",
     "img": {
-      "src": "./images/marvel-explorer.png",
+      "src": "./images/marvel-explorer.webp",
       "alt": "Превью marvel explorer"
     },
     "badges": ["React", "SCSS", "JS"],
@@ -45,9 +45,9 @@
   },
 
   {
-    "id": 4,
+    "id": "personal-website",
     "img": {
-      "src": "./images/personal-website.png",
+      "src": "./images/personal-website.webp",
       "alt": "Превью personal-website"
     },
     "badges": ["HTML", "CSS", "JS"],
