@@ -1,5 +1,23 @@
+// Base
 $color-bg: #2a2a2a;
 $color-primary: #cbcbcb;
 $color-secondary: #f5f5f5;
 $color-accent: #a0a400;
+
+// Surfaces
+$color-surface: rgba(0, 0, 0, 0.31); // project-card bg
+$color-surface-soft: rgba(52, 51, 51, 0.24); // panel bg
+$color-screen: #0b0b0b;
+
+// Text
+$color-text-muted: #9d9d9d; // comments, secondary info
+
+// UI
+$color-border-soft: rgba(255, 255, 255, 0.03);
+$color-ui-dark: #3f3f3f;
+
+// Effects
+$color-shadow-inset: rgba(0, 0, 0, 0.7);
+$color-shadow-panel: #1b1c1b;
+
 $font: 'IBM Plex Mono', monospace;

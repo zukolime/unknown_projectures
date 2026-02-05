@@ -45,13 +45,8 @@ a {
   width: 60%;
 }
 
-@-moz-document url-prefix() {  
+@-moz-document url-prefix() {
   .noise-overlay {
     display: none;
-  }
-  
-  .project-card:hover {
-    transform: none;
-    border-color: #a0a400;
   }
 }
