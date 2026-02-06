@@ -25,7 +25,7 @@
     "description": "Минималистичное приложение для управления задачами. Можно создавать, удалять задачи, а также изменять их статус «выполнено/не выполнено». Реализованы хранение данных в LocalStorage, маршрутизация между страницами и переключение светлой/тёмной темы. Проект демонстрирует работу с Redux и компонентный подход к стилизации.",
     "links": {
       "link_demo": "https://zukolime.github.io/taskly",
-      "link_github": "https://github.com/zukolime/taskly/tree/styled-components"
+      "link_github": "https://github.com/zukolime/taskly/"
     }
   },
 
