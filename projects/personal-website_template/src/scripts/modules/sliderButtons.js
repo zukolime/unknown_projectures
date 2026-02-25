@@ -1,3 +1,5 @@
+import arrow from '../../assets/img/icons/sprite.svg';
+
 export const addSliderButtons = (buttonsBox, container, clickFunc) => {
   if (buttonsBox) {
     buttonsBox.remove();
@@ -11,14 +13,14 @@ export const addSliderButtons = (buttonsBox, container, clickFunc) => {
                               transform="rotate(180)"
                             >
                               <use
-                                href="../../src/assets/img/icons/sprite.svg#arrow-slider"
+                                href="${arrow}#arrow-slider"
                               ></use>
                             </svg>
                           </button>
                           <button class="button button-right">
                             <svg class="arrow">
                               <use
-                                href="../../src/assets/img/icons/sprite.svg#arrow-slider"
+                                href="${arrow}#arrow-slider"
                               ></use>
                             </svg>
                         </button>`;

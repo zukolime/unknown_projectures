@@ -52,7 +52,7 @@
     },
     "badges": ["HTML", "CSS", "JS"],
     "title": "Сайт-визитка",
-    "description": "Простая сайт-визитка на HTML, CSS и JS. Реализованы слайдеры с поддержкой тач-событий и модальное окно для изображений.",
+    "description": "Шаблон простого сайта-визитки на HTML, CSS и JS. Реализованы слайдеры с поддержкой тач-событий и модальное окно для изображений.",
     "links": {
       "link_demo": "/projects/personal-website_template/dist/index.html",
       "link_github": "https://github.com/zukolime/unknown_projectures/tree/main/projects/personal-website_template"

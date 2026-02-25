@@ -15,10 +15,21 @@
   cursor: pointer;
   width: 3.125rem;
   height: 3.125rem;
+  opacity: 1;
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease;
 }
 
 .hide {
   display: none;
+}
+
+@media (hover: hover) {
+  .buttons-slider .button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: 992px) {
