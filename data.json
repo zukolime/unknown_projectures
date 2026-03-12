@@ -1,5 +1,20 @@
 [
   {
+    "id": "historical-dates",
+    "img": {
+      "src": "./images/historical-dates.webp",
+      "alt": "Превью Исторические даты"
+    },
+    "badges": ["React", "styled-components", "TS"],
+    "title": "Исторические даты",
+    "description": "Интерактивный анимированный блок с краткой информацией об исторических событиях, сгруппированных по различным сферам: спорт, искусство, литература, технологии, кино и наука. Реализован на React с использованием TypeScript, styled-components, Swiper и GSAP для анимации. Проект демонстрирует навыки работы с компонентами, анимацией и адаптивным дизайном.",
+    "links": {
+      "link_demo": "https://historical-dates-seven-ashy.vercel.app/",
+      "link_github": "https://github.com/zukolime/historical-dates"
+    }
+  },
+
+  {
     "id": "profremont",
     "img": {
       "src": "./images/profremont.webp",
