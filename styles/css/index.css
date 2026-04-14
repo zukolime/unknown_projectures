@@ -68,16 +68,24 @@ a {
 }
 .header__comment {
   display: block;
-  margin-top: 6px;
+  width: 0;
+  margin: 6px auto 0;
+  border-right: 2px solid;
   font-size: 0.8em;
   color: #9d9d9d;
-  opacity: 0;
-  animation: commentFadeIn 0.8s ease forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(51) forwards, blink 0.6s step-end infinite;
   animation-delay: 0.4s;
 }
-@keyframes commentFadeIn {
+@keyframes typing {
   to {
-    opacity: 0.9;
+    width: 51ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 .header__links {
@@ -130,6 +138,32 @@ a {
     width: 40px;
   }
 }
+.tags-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+  margin: 16px 0 16px 0;
+}
+
+.tag-filter {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(177, 177, 177, 0.39);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  color: #f5f5f5;
+  transform: translate(0, 0);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.tag-filter:hover, .tag-filter.active {
+  transform: translate(-1px, -1px);
+  box-shadow: 0px 0px 7px 0px #a0a400;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));

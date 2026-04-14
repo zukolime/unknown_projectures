@@ -20,17 +20,28 @@
 
   &__comment {
     display: block;
-    margin-top: 6px;
+    width: 0;
+    margin: 6px auto 0;
+    border-right: 2px solid;
     font-size: 0.8em;
     color: $color-text-muted;
-    opacity: 0;
-    animation: commentFadeIn 0.8s ease forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+      typing 4s steps(51) forwards,
+      blink 0.6s step-end infinite;
     animation-delay: 0.4s;
   }
 
-  @keyframes commentFadeIn {
+  @keyframes typing {
     to {
-      opacity: 0.9;
+      width: 51ch;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
     }
   }
 
