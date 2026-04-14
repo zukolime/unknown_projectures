@@ -5,12 +5,27 @@
       "src": "./images/historical-dates.webp",
       "alt": "Превью Исторические даты"
     },
-    "badges": ["React", "styled-components", "TS"],
+    "badges": ["React", "styled-components", "TS", "GSAP", "Swiper"],
     "title": "Исторические даты",
-    "description": "Интерактивный анимированный блок с краткой информацией об исторических событиях, сгруппированных по различным сферам: спорт, искусство, литература, технологии, кино и наука. Реализован на React с использованием TypeScript, styled-components, Swiper и GSAP для анимации. Проект демонстрирует навыки работы с компонентами, анимацией и адаптивным дизайном.",
+    "description": "Интерактивный анимированный блок с краткой информацией об исторических событиях, сгруппированных по различным сферам: спорт, искусство, литература, технологии, кино и наука. Проект демонстрирует навыки работы с компонентами, анимацией и адаптивным дизайном.",
     "links": {
       "link_demo": "https://historical-dates-seven-ashy.vercel.app/",
       "link_github": "https://github.com/zukolime/historical-dates"
+    }
+  },
+
+  {
+    "id": "gym-tariffs",
+    "img": {
+      "src": "./images/gym-tariffs.webp",
+      "alt": "Превью Блок с тарифными планами"
+    },
+    "badges": ["Next", "TS", "Tailwind"],
+    "title": "Блок с тарифными планами",
+    "description": "Интерактивный блок с таймером, выбором тарифа и валидацией пользовательских действий.",
+    "links": {
+      "link_demo": "https://gym-tariffs.vercel.app/",
+      "link_github": "https://github.com/zukolime/gym-tariffs"
     }
   },
 
