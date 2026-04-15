@@ -77,9 +77,9 @@ const createProjectCard = (project) => {
         .join('')}      
       </div>
       <h3 class="project-card__title">${project.title}</h3>
-      <p class="project-card__description">
-        ${project.description}
-      </p>
+      <ul class="project-card__description">
+        ${project.description.map((item) => `<li>${item}</li>`).join('')}
+      </ul>
       <div class="project-card__links">
         <a
           href="${project.links.link_demo}"
