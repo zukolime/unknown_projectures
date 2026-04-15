@@ -1,6 +1,7 @@
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(3, minmax(380px, 1fr));
+  grid-template-rows: auto;
   gap: 26px;
   margin-top: 28px;
 }

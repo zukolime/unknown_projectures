@@ -1,3 +1,30 @@
+const createTag = (text) => {
+  const tag = document.createElement('button');
+  tag.className = 'tag-filter';
+  tag.value = text.toLowerCase();
+  tag.tabIndex = 0;
+
+  tag.innerHTML = text;
+
+  return tag;
+};
+
+const renderTags = (tags) => {
+  const container = document.querySelector('.tags-filters');
+
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const allTags = tags.flat();
+  const deletedDuplicates = [...new Set(allTags)];
+
+  deletedDuplicates.forEach((tag) => {
+    const tagItem = createTag(tag);
+    container.append(tagItem);
+  });
+};
+
 const loadData = async () => {
   try {
     const response = await fetch('data.json');
@@ -87,8 +114,35 @@ const renderProjects = (projects) => {
   });
 };
 
+const filteredByTag = (data) => {
+  const container = document.querySelector('.tags-filters');
+
+  let activeFilters = [];
+  let visibleData = data;
+
+  container.addEventListener('click', (e) => {
+    const filter = e.target.closest('.tag-filter');
+    if (!filter) return;
+
+    filter.classList.toggle('active');
+
+    if (filter.classList.contains('active')) {
+      activeFilters = [...activeFilters, filter.value];
+      visibleData = data.filter((projects) => projects.badges.some((badge) => activeFilters.includes(badge.toLowerCase())));
+    } else {
+      activeFilters.splice(activeFilters.indexOf(filter.value), 1);
+      visibleData = data.filter((projects) => projects.badges.some((badge) => activeFilters.includes(badge.toLowerCase())));
+    }
+
+    return visibleData.length > 0 ? renderProjects(visibleData) : renderProjects(data);
+  });
+
+  return renderProjects(visibleData);
+};
+
 loadData()
   .then((data) => {
-    renderProjects(data);
+    filteredByTag(data);
+    renderTags(data.map((d) => d.badges));
   })
   .catch((error) => console.log(error));
