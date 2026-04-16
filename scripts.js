@@ -122,8 +122,13 @@ const renderProjects = (projects) => {
 
   container.innerHTML = '';
 
-  projects.forEach((project) => {
+  projects.forEach((project, index) => {
     const projectCard = createProjectCard(project);
+
+    setTimeout(() => {
+      projectCard.classList.add('show');
+    }, 100);
+
     container.append(projectCard);
   });
 };

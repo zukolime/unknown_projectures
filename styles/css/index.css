@@ -225,12 +225,17 @@ a {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  opacity: 0;
   overflow: visible;
   background-color: rgba(26, 26, 26, 0.5);
   border-radius: 10px;
   padding: 21px;
   border: 1px solid rgba(255, 255, 255, 0.03);
   transition: box-shadow 0.3s ease;
+}
+.project-card.show {
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 @media (hover: hover) {
   .project-card:hover, .project-card:focus {
