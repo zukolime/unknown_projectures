@@ -18,7 +18,7 @@ a {
 }
 
 .container {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
   padding: 32px 0;
 }
@@ -119,8 +119,10 @@ a {
   gap: 4px;
   transition: color 0.3s ease;
 }
-.header__link:hover {
-  color: #a0a400;
+@media (hover: hover) {
+  .header__link:hover {
+    color: #a0a400;
+  }
 }
 .header__link:after {
   content: "";
@@ -134,9 +136,11 @@ a {
   transform-origin: right;
   transition: transform 0.3s ease;
 }
-.header__link:hover:after {
-  transform: scaleX(1);
-  transform-origin: left;
+@media (hover: hover) {
+  .header__link:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 .header__link svg {
   fill: none;
@@ -148,17 +152,24 @@ a {
     width: 40px;
   }
 }
-.header__link:hover svg {
-  stroke: #a0a400;
+@media (hover: hover) {
+  .header__link:hover svg {
+    stroke: #a0a400;
+  }
 }
 
 .tags-filters {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   gap: 8px;
   margin: 16px 0 16px 0;
+}
+.tags-filters:has(.tag-filter.active) .reset-filter {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .tag-filter {
@@ -175,6 +186,16 @@ a {
 }
 .tag-filter:hover, .tag-filter.active {
   transform: translate(-1px, -1px);
+  box-shadow: 0px 0px 7px 0px #a0a400;
+}
+
+.reset-filter {
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.reset-filter:hover {
+  transform: none;
   box-shadow: 0px 0px 7px 0px #a0a400;
 }
 
@@ -200,19 +221,21 @@ a {
   overflow: visible;
   background-color: rgba(26, 26, 26, 0.5);
   border-radius: 10px;
-  padding: 12px;
+  padding: 21px;
   border: 1px solid rgba(255, 255, 255, 0.03);
   transition: box-shadow 0.3s ease;
 }
-.project-card:hover, .project-card:focus {
-  box-shadow: 0px 0px 7px 0px #a0a400;
-  cursor: default;
-}
-.project-card:focus {
-  outline: none;
-}
-.project-card:hover .project-card__screen-image, .project-card:focus .project-card__screen-image {
-  filter: grayscale(0%);
+@media (hover: hover) {
+  .project-card:hover, .project-card:focus {
+    box-shadow: 0px 0px 7px 0px #a0a400;
+    cursor: default;
+  }
+  .project-card:focus {
+    outline: none;
+  }
+  .project-card:hover .project-card__screen-image, .project-card:focus .project-card__screen-image {
+    filter: grayscale(0%);
+  }
 }
 .project-card__device {
   display: flex;

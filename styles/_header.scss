@@ -75,8 +75,10 @@
     gap: 4px;
     transition: color 0.3s ease;
 
-    &:hover {
-      color: $color-accent;
+    @media (hover: hover) {
+      &:hover {
+        color: $color-accent;
+      }
     }
 
     &:after {
@@ -92,9 +94,11 @@
       transition: transform 0.3s ease;
     }
 
-    &:hover:after {
-      transform: scaleX(1);
-      transform-origin: left;
+    @media (hover: hover) {
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
 
     svg {
@@ -107,8 +111,10 @@
       }
     }
 
-    &:hover svg {
-      stroke: $color-accent;
+    @media (hover: hover) {
+      &:hover svg {
+        stroke: $color-accent;
+      }
     }
   }
 }

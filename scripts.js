@@ -1,7 +1,18 @@
+const createResetButton = () => {
+  const resetBtn = document.createElement('button');
+  resetBtn.className = 'tag-filter reset-filter';
+  resetBtn.textContent = '✕ Сброс';
+  resetBtn.type = 'button';
+  resetBtn.tabIndex = 0;
+
+  return resetBtn;
+};
+
 const createTag = (text) => {
   const tag = document.createElement('button');
   tag.className = 'tag-filter';
   tag.value = text.toLowerCase();
+  tag.type = 'button';
   tag.tabIndex = 0;
 
   tag.innerHTML = text;
@@ -18,6 +29,9 @@ const renderTags = (tags) => {
 
   const allTags = tags.flat();
   const deletedDuplicates = [...new Set(allTags)];
+
+  const resetBtn = createResetButton();
+  container.append(resetBtn);
 
   deletedDuplicates.forEach((tag) => {
     const tagItem = createTag(tag);
@@ -126,6 +140,17 @@ const filteredByTag = (data) => {
 
     filter.classList.toggle('active');
 
+    // Сброс всех фильтров и отображение всех проектов
+    if (filter.classList.contains('reset-filter')) {
+      const allTags = document.querySelectorAll('.tag-filter');
+      activeFilters = [];
+
+      allTags.forEach((tag) => tag.classList.remove('active'));
+      renderProjects(data);
+      return;
+    }
+
+    // фильтрация проектов на основе активных тегов
     if (filter.classList.contains('active')) {
       activeFilters = [...activeFilters, filter.value];
       visibleData = data.filter((projects) => projects.badges.some((badge) => activeFilters.includes(badge.toLowerCase())));
