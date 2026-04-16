@@ -59,6 +59,7 @@ const createProjectCard = (project) => {
         <img
           src="${project.img.src}"
           alt="${project.img.alt}"
+          loading="lazy"
           class="project-card__screen-image"
           width="420"
           height="420"
@@ -169,6 +170,14 @@ const filteredByTag = (data) => {
 
   return renderProjects(visibleData);
 };
+
+const comments = [
+  '// интерфейс должен работать, а не просто выглядеть',
+  '// делаю так, чтобы интерфейс не раздражал пользователя',
+  '// обычно замечаю проблемы раньше, чем о них говорят',
+];
+
+const randomComment = comments[Math.floor(Math.random() * comments.length)];
 
 loadData()
   .then((data) => {
