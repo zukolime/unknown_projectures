@@ -73,15 +73,20 @@ a {
 }
 .header__comment {
   display: block;
-  width: 0;
+  width: 100%;
   margin: 6px auto 0;
-  border-right: 2px solid;
   font-size: 0.8em;
   color: #9d9d9d;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 4s steps(52) forwards, blink 0.6s step-end 14;
   animation-delay: 0.4s;
+}
+.header__comment::after {
+  content: "|";
+  display: inline-block;
+  width: 2px;
+  color: #9d9d9d;
+  animation: blink 0.6s step-end 20;
 }
 @media (max-width: 920px) {
   .header__comment {
@@ -89,17 +94,11 @@ a {
     width: 100%;
     border-right: none;
     text-align: center;
-    animation: none;
-  }
-}
-@keyframes typing {
-  to {
-    width: 52ch;
   }
 }
 @keyframes blink {
   50% {
-    border-color: transparent;
+    opacity: 0.1;
   }
 }
 .header__links {

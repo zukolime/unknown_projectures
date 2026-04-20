@@ -171,17 +171,83 @@ const filteredByTag = (data) => {
   return renderProjects(visibleData);
 };
 
-const comments = [
-  '// интерфейс должен работать, а не просто выглядеть',
-  '// делаю так, чтобы интерфейс не раздражал пользователя',
-  '// обычно замечаю проблемы раньше, чем о них говорят',
-];
-
-const randomComment = comments[Math.floor(Math.random() * comments.length)];
-
 loadData()
   .then((data) => {
     filteredByTag(data);
     renderTags(data.map((d) => d.badges));
   })
   .catch((error) => console.log(error));
+
+// header comment
+const comments = ['// внимательна к', '// нет, слишком избито', '...', '// а впрочем — вместо тысячи слов, мои проекты ниже ↓'];
+
+const commentElement = document.querySelector('.header__comment');
+
+const CONFIG = {
+  typeSpeed: 100,
+  deleteSpeed: 25,
+  pause: 500,
+};
+
+const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isMobile = window.matchMedia('(max-width: 920px)').matches;
+
+const shouldFallback = isReducedMotion || isMobile;
+
+if (shouldFallback) {
+  commentElement.textContent = comments.at(-1);
+}
+
+const delay = (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+const type = async () => {
+  for (let i = 0; i < comments.length; i++) {
+    const current = comments[i];
+    for (let j = 0; j <= current.length; j++) {
+      commentElement.textContent = current.slice(0, j);
+      await delay(CONFIG.typeSpeed);
+    }
+    await delay(CONFIG.pause);
+  }
+};
+
+type();
+
+// let currentCommentIndex = 0;
+// let currentCharIndex = 0;
+
+// const typeNextChar = () => {
+//   if (currentCommentIndex >= comments.length) return;
+
+//   const currentComment = comments[currentCommentIndex];
+
+//   if (currentCharIndex < currentComment.length) {
+//     commentElement.textContent += currentComment[currentCharIndex];
+//     currentCharIndex++;
+//     setTimeout(typeNextChar, 100);
+//   } else {
+//     const setTimeoutId = setTimeout(() => {
+//       deleteNextChar();
+//     }, 500);
+
+//     if (comments.length - 1 === currentCommentIndex) clearTimeout(setTimeoutId);
+//   }
+// };
+
+// const deleteNextChar = () => {
+//   if (commentElement.textContent.length > 0) {
+//     commentElement.textContent = commentElement.textContent.slice(0, -1);
+//     setTimeout(deleteNextChar, 25);
+//   } else {
+//     currentCommentIndex++;
+//     currentCharIndex = 0;
+
+//     if (currentCommentIndex < comments.length) {
+//       setTimeout(typeNextChar, 500);
+//     }
+//   }
+// };
+
+// typeNextChar();
