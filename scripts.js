@@ -220,7 +220,7 @@ const runTypingAnimation = async () => {
     await type(currentComment);
     await delay(CONFIG.pause);
 
-    if (i === lastComment) return;
+    if (currentComment === lastComment) return;
 
     await remove(currentComment);
     await delay(CONFIG.pause);
