@@ -45,6 +45,10 @@
       width: 100%;
       border-right: none;
       text-align: center;
+
+      &::after {
+        animation: none;
+      }
     }
   }
 

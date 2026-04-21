@@ -179,9 +179,10 @@ loadData()
   .catch((error) => console.log(error));
 
 // header comment
-const comments = ['// внимательна к', '// нет, слишком избито', '...', '// а впрочем — вместо тысячи слов, мои проекты ниже ↓'];
+const comments = ['// внимательна к', 'нет, слишком избито', '...', '// а впрочем — вместо тысячи слов, мои проекты ниже ↓'];
 
 const commentElement = document.querySelector('.header__comment');
+const lastComment = comments.at(-1);
 
 const CONFIG = {
   typeSpeed: 100,
@@ -194,60 +195,40 @@ const isMobile = window.matchMedia('(max-width: 920px)').matches;
 
 const shouldFallback = isReducedMotion || isMobile;
 
-if (shouldFallback) {
-  commentElement.textContent = comments.at(-1);
-}
-
 const delay = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-const type = async () => {
+const type = async (current) => {
+  for (let j = 0; j <= current.length; j++) {
+    commentElement.textContent = current.slice(0, j);
+    await delay(CONFIG.typeSpeed);
+  }
+};
+
+const remove = async (current) => {
+  for (let j = current.length; j >= 0; j--) {
+    commentElement.textContent = current.slice(0, j);
+    await delay(CONFIG.deleteSpeed);
+  }
+};
+
+const runTypingAnimation = async () => {
   for (let i = 0; i < comments.length; i++) {
-    const current = comments[i];
-    for (let j = 0; j <= current.length; j++) {
-      commentElement.textContent = current.slice(0, j);
-      await delay(CONFIG.typeSpeed);
-    }
+    const currentComment = comments[i];
+
+    await type(currentComment);
+    await delay(CONFIG.pause);
+
+    if (i === lastComment) return;
+
+    await remove(currentComment);
     await delay(CONFIG.pause);
   }
 };
 
-type();
-
-// let currentCommentIndex = 0;
-// let currentCharIndex = 0;
-
-// const typeNextChar = () => {
-//   if (currentCommentIndex >= comments.length) return;
-
-//   const currentComment = comments[currentCommentIndex];
-
-//   if (currentCharIndex < currentComment.length) {
-//     commentElement.textContent += currentComment[currentCharIndex];
-//     currentCharIndex++;
-//     setTimeout(typeNextChar, 100);
-//   } else {
-//     const setTimeoutId = setTimeout(() => {
-//       deleteNextChar();
-//     }, 500);
-
-//     if (comments.length - 1 === currentCommentIndex) clearTimeout(setTimeoutId);
-//   }
-// };
-
-// const deleteNextChar = () => {
-//   if (commentElement.textContent.length > 0) {
-//     commentElement.textContent = commentElement.textContent.slice(0, -1);
-//     setTimeout(deleteNextChar, 25);
-//   } else {
-//     currentCommentIndex++;
-//     currentCharIndex = 0;
-
-//     if (currentCommentIndex < comments.length) {
-//       setTimeout(typeNextChar, 500);
-//     }
-//   }
-// };
-
-// typeNextChar();
+if (shouldFallback) {
+  commentElement.textContent = lastComment;
+} else {
+  runTypingAnimation();
+}

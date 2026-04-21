@@ -95,6 +95,9 @@ a {
     border-right: none;
     text-align: center;
   }
+  .header__comment::after {
+    animation: none;
+  }
 }
 @keyframes blink {
   50% {
