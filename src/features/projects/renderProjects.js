@@ -1,5 +1,5 @@
 import { createEmptyState } from '@/components/emptyState/createEmptyState';
-import { createProjectCard } from '@/components/projectCard';
+import { createProjectCard } from '@/components/projectCard/createProjectCard';
 
 export const renderProjects = (projects) => {
   const container = document.querySelector('.projects');
