@@ -1,4 +1,4 @@
-import { initProjectsFilter } from '@/features/tags/initTagFilter';
+import { initProjectsFilter } from '@/features/tags/initProjectsFilter';
 import { loadData } from './data/api';
 import { renderTags } from './features/tags/renderTags';
 
