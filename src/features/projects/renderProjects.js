@@ -1,9 +1,15 @@
+import { createEmptyState } from '@/components/emptyState/createEmptyState';
 import { createProjectCard } from '@/components/projectCard';
 
 export const renderProjects = (projects) => {
   const container = document.querySelector('.projects');
 
   if (!container) return;
+
+  if (projects.length === 0) {
+    container.append(createEmptyState());
+    return;
+  }
 
   container.innerHTML = '';
 
