@@ -2,7 +2,7 @@ import { renderBadges } from '@/components/projectCard/renderBadges';
 import { renderDescription } from '@/components/projectCard/renderDescription';
 import { renderLinks } from '@/components/projectCard/renderLinks';
 
-export const createProjectCard = (project) => {
+export const createProjectCard = (project, index) => {
   const article = document.createElement('article');
   article.className = 'project-card';
   article.tabIndex = 0;
@@ -13,7 +13,8 @@ export const createProjectCard = (project) => {
         <img
           src="${project.img.src}"
           alt="${project.img.alt}"
-          loading="lazy"
+          loading="${index < 2 ? 'eager' : 'lazy'}"
+          decoding="async"
           class="project-card__screen-image"
           width="420"
           height="420"
