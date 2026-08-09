@@ -1,6 +1,5 @@
 import { renderBadges } from '@/components/projectCard/renderBadges';
 import { renderDescription } from '@/components/projectCard/renderDescription';
-import { renderLinks } from '@/components/projectCard/renderLinks';
 
 export const createProjectCard = (project, index) => {
   const article = document.createElement('article');
@@ -8,6 +7,7 @@ export const createProjectCard = (project, index) => {
   article.tabIndex = 0;
 
   article.innerHTML = `
+  <a href="${project.links.link_demo}" target="_blank" rel="noopener noreferrer" class="project-card__link" title="Открыть проект ${project.title} в новой вкладке">
     <div class="project-card__device">
       <div class="project-card__screen">
         <img
@@ -40,10 +40,8 @@ export const createProjectCard = (project, index) => {
       <ul class="project-card__description">
         ${renderDescription(project.description)}
       </ul>
-      <div class="project-card__links">
-        ${renderLinks(project.links)}
-      </div>
     </div>
+  </a>
   `;
 
   return article;

@@ -1,8 +1,7 @@
-import { initProjectsFilter } from '@/features/tags/initProjectsFilter';
-import { loadData } from './data/api';
-import { renderTags } from './features/tags/renderTags';
-
+import { loadData } from '@/data/api';
 import { initTypingAnimation } from '@/features/headerAnimation/initTypingAnimation';
+import { initProjectsFilter } from '@/features/tags/initProjectsFilter';
+import { renderTags } from '@/features/tags/renderTags';
 
 import './styles/main.scss';
 
