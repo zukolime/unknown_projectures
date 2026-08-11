@@ -61,6 +61,27 @@
   },
 
   {
+    "id": "employees-register",
+    "img": {
+      "src": "./images/employees-register.webp",
+      "alt": "Превью Реестр сотрудников"
+    },
+    "badges": ["Vue", "JS", "SCSS", "Адаптив"],
+    "title": "Реестр сотрудников",
+    "description": [
+      "Веб-приложение для ведения и редактирования реестра сотрудников",
+      "Добавление, редактирование и удаление записей без перезагрузки страницы",
+      "Валидация данных: обязательные поля, возраст и соответствие стажа возрасту сотрудника",
+      "Подходит для учета сотрудников и внутренних корпоративных систем"
+    ],
+
+    "links": {
+      "link_demo": "https://employees-register.vercel.app/",
+      "link_github": "https://github.com/zukolime/employees_register"
+    }
+  },
+
+  {
     "id": "profremont",
     "img": {
       "src": "./images/profremont.webp",
