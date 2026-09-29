@@ -24,12 +24,12 @@
     "id": "personal-website",
     "img": {
       "src": "./images/personal-website.webp",
-      "alt": "Превью сайта-визитки"
+      "alt": "Превью многостраничного сайта бюро переводов"
     },
-    "badges": ["HTML", "CSS", "JS", "Swiper", "Адаптив"],
-    "title": "Cайт-визитка",
+    "badges": ["Pug", "CSS", "JS", "Swiper", "Адаптив"],
+    "title": "Многостраничный сайт услуг",
     "description": [
-      "Сайт-визитка с современным дизайном и интерактивными элементами",
+      "Многостраничный сайт с каталогом услуг и отдельными страницами по направлениям",
       "Адаптивная верстка под мобильные устройства",
       "Интерактивные элементы: слайдеры в мобильной версии, модальные окна, аккордеон",
       "Подходит для презентации услуг или портфолио"
@@ -118,46 +118,6 @@
     "links": {
       "link_demo": "https://zukolime.github.io/Profremont-project/",
       "link_github": "https://github.com/zukolime/Profremont-project"
-    }
-  },
-
-  {
-    "id": "taskly",
-    "img": {
-      "src": "./images/taskly.webp",
-      "alt": "Превью Taskly"
-    },
-    "badges": ["React", "styled-components", "TS", "Адаптив"],
-    "title": "Менеджер задач",
-    "description": [
-      "Приложение для управления задачами с сохранением данных",
-      "Управление задачами: создание, удаление и изменение статуса выполнения",
-      "Поддерживает выбор светлой или тёмной темы интерфейса",
-      "Может служить основой для CRM или внутренних инструментов"
-    ],
-    "links": {
-      "link_demo": "https://zukolime.github.io/taskly",
-      "link_github": "https://github.com/zukolime/taskly/"
-    }
-  },
-
-  {
-    "id": "marvel-explorer",
-    "img": {
-      "src": "./images/marvel-explorer.webp",
-      "alt": "Превью marvel explorer"
-    },
-    "badges": ["React", "SCSS", "JS"],
-    "title": "Поисковый сервис",
-    "description": [
-      "Поиск персонажей и комиксов с отображением подробной информации",
-      "Отображает детальную информацию с динамической загрузкой данных",
-      "Навигация между страницами без перезагрузки приложения",
-      "Работа с динамическими данными из внешнего API"
-    ],
-    "links": {
-      "link_demo": "https://search-panel-rho.vercel.app/",
-      "link_github": "https://github.com/zukolime/marvel"
     }
   }
 ]
